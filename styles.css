@@ -1,0 +1,76 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(images/preview_2.png);
+    background-size: cover;
+    color: aliceblue;
+}
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+
+div {
+    width: 100vw;
+    height: 30vh;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+p {
+    padding-top: 10px;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    margin: 10px auto;
+    width: 100px;
+    font-weight: 800;
+    border-radius: 5px;
+}
+
+#increment-btn {
+    background: aquamarine;
+}
+
+#save-btn {
+    background: rgb(255, 106, 0);
+}
+
+#decrease-btn {
+    background: rgb(226, 226, 226);
+}
+    
+
+#increment-btn:hover {
+    background: black;
+    color: aliceblue;
+}
+
+#decrease-btn:hover {
+    background: black;
+    color: aliceblue;
+}
+
+#save-btn:hover {
+    background: black;
+    color: aliceblue;
+}
+
