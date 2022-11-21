@@ -19,5 +19,11 @@ function save() {
     countEl.textContent = count
 }
 
+function remove() {
+    count = 0;
+    countEl.textContent = count;
+    saveEl.textContent = "Previous Entries: ";
+}
+
 
 
