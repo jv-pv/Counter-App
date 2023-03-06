@@ -1,29 +1,37 @@
 let count = 0
-let countEl = document.getElementById("count-el")
-let saveEl = document.getElementById("save-el")
+const countEl = document.getElementById("count-el")
+const saveEl = document.getElementById("save-el")
+const incrementBtn = document.getElementById('increment-btn')
+const decrementBtn = document.getElementById('decrement-btn')
+const saveBtn = document.getElementById('save-btn')
+const clearBtn = document.getElementById('clearAll-btn')
 
-function increment() {
-    count++ 
-    countEl.textContent = count
-}
 
-function decrease() {
+incrementBtn.addEventListener('click', function() {
+    count++
+    count >= 0 ? decrementBtn.disabled = false : null
+    countEl.innerText = count
+})
+
+decrementBtn.addEventListener('click', function() {
     count--
-    countEl.textContent = count
-}
+    count === 0 ? decrementBtn.disabled = true : null
+    countEl.innerText = count
+})
 
-function save() {
-    saveEntry = count + " - "
-    saveEl.textContent += saveEntry
+saveBtn.addEventListener('click', function(){
+    let countStr = count + " - ";
+    saveEl.innerText += countStr
+})
+
+clearBtn.addEventListener('click', function(){
     count = 0
-    countEl.textContent = count
-}
+    countEl.innerText = 0
+    saveEl.innerHTML = ""
+})
 
-function remove() {
-    count = 0;
-    countEl.textContent = count;
-    saveEl.textContent = "Previous Entries: ";
-}
+
+
 
 
 
