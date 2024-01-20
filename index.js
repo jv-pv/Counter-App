@@ -9,13 +9,13 @@ const clearBtn = document.getElementById('clearAll-btn')
 
 incrementBtn.addEventListener('click', function() {
     count++
-    count >= 0 ? decrementBtn.disabled = false : null
+    if (count >= 0) decrementBtn.disabled = false 
     countEl.innerText = count
 })
 
 decrementBtn.addEventListener('click', function() {
     count--
-    count === 0 ? decrementBtn.disabled = true : null
+    if (count === 0) this.disabled = true
     countEl.innerText = count
 })
 
@@ -29,7 +29,6 @@ clearBtn.addEventListener('click', function(){
     countEl.innerText = 0
     saveEl.innerHTML = ""
 })
-
 
 
 
